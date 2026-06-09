@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-navy: #060B14;
+  --color-navy-light: #0D1627;
+  --color-navy-border: #1F2A40;
+  
+  --color-neon-blue: #00F0FF;
+  --color-neon-blue-dark: #00A6B2;
+  
+  --color-gold: #FFD700;
+  --color-gold-dark: #B89B00;
+  
+  --font-sans: "Inter", "Poppins", sans-serif;
+  --font-mono: "Space Mono", "JetBrains Mono", monospace;
+}
+
+@layer utilities {
+  .glassmorphism {
+    @apply bg-navy-light/60 backdrop-blur-xl border border-navy-border shadow-lg shadow-black/50;
+  }
+  .text-gradient-gold {
+    @apply text-transparent bg-clip-text bg-gradient-to-r from-gold to-yellow-200;
+  }
+  .text-gradient-neon {
+    @apply text-transparent bg-clip-text bg-gradient-to-r from-neon-blue to-blue-400;
+  }
+}
+
+body {
+  background-color: var(--color-navy);
+  color: white;
+  font-family: "Inter", sans-serif;
+}

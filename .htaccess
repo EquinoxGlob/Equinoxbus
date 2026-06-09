@@ -1,0 +1,11 @@
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+  
+  # Allow access to existing files and directories (like index.html, JS, CSS, images)
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  
+  # If the file/dir doesn't exist, route everything to index.html and append query string (QSA)
+  RewriteRule ^(.*)$ /index.html [QSA,L]
+</IfModule>

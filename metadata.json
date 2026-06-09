@@ -1,0 +1,6 @@
+{
+  "name": "EQUINOX",
+  "description": "Decentralized 14-position co-matrix system with NFT liquidity",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
